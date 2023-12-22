@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: double;
+    color: rgb(200, 37, 37);
+}
+a:active{
+    color: green;
+}
+a:visited{
+    color: black;
+}
+body{
+    background-color: #f4f4f4;
+    color: #1770cf;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight:normal;
+    /*Same as above
+    font: normal 16px Arial,Helvetica,sans-serif;*/
+
+    line-height: 1.6em;
+    margin:0
+}
+
+
+/*push to the edges*/
+.container{
+    width: 80%;
+    margin: auto;
+
+}
+.box-1{
+    background-color: #333;
+    color:#fff;
+    border-right:5px red solid ;
+    border-left: 5px red solid;
+    border-top: 5px red solid;
+    border-bottom: 5px red solid;
+    /*same as above*/
+    border: 5px red solid;
+    border-width: 3px;
+    border-bottom-width:10px ;
+    border-top-style: dotted;
+    border-bottom-style: double;
+
+    padding:20px ;
+    margin: 20px 0; 
+
+}
+.box-1 h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 0.3em;
+}
+
+
+
+.box-2{
+    background-color: #f90d0d;
+    color: #333;
+    border:3px dotted lightseagreen ;
+    padding: 20px;
+    margin: 20px 0;
+}
+.box-2 h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-weight: bolder;
+    font-style: oblique;
+    text-decoration: dotted;
+
+}
+.categories{
+    border: 1px red solid;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.categories h2{
+text-align: center;
+}
+.categories ul{
+    padding: 0;
+    list-style: circle;
+   
+}
+.categories li{
+    padding-bottom:6px ;
+    border-bottom: dotted blue 1px ;
+    list-style-image:url('../Images/check1.png') ;
+}
+.myform{
+    padding: 20px;
+
+}
+.myform .form-group{
+    padding-bottom: 15px;
+}
+.myform label{
+    display: block;
+
+}
+.myform input[type='text'], .myform textarea{
+    padding: 8px;
+    width: 100%;
+}
