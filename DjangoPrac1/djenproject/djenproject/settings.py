@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cdlibrary.apps.CdlibraryConfig'
+    'cdlibrary.apps.CdlibraryConfig',
+    'pastebin.apps.PastebinConfig',
 ]
 
 MIDDLEWARE = [
