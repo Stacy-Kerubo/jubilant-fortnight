@@ -1,10 +1,23 @@
-{%extends 'main/base/html'%} {%block title%} View list {%endblock%} {%block
+{%extends 'main/base.html'%} {%block title%} View list {%endblock%} {%block
 content%}
 <h1>{{ls.name}}</h1>
-<ul>
-  {% for item in ls.item_set.all%} {%if item.complete==True%}
-  <li>{{item.text}}</li>
-  {%{% endif %}%} {%endfor%}
-</ul>
-
+<form method="post" action="#">
+  <ul>
+    {% for item in ls.item_set.all%} {%if item.complete==False%}
+    <li>
+      <input
+        type="checknox"
+        ,value="clicked"
+        ,
+        name="c{{item.id}}"
+      />{{item.text}}
+    </li>
+    {%else%}
+    <li>{{item.text}}</li>
+    {% endif %} {%endfor%}
+  </ul>
+  <button type="submit" ,name="save" ,value="save">Save</button>
+  <input type="text" , name="new" />
+  <button type="submit" ,name="newitem" ,value="new_Item">Add Item</button>
+</form>
 {%endblock%}
