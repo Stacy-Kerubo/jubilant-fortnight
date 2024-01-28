@@ -7,6 +7,10 @@ class Paste(models.Model):
     created_on=models.DateTimeField(auto_now_add=True)
     updated_on=models.DateTimeField(auto_now=True)
     
-def __str__(self):
-    return self.name or self.id
+    def __str__(self):
+        return self.name or self.id
+
+
+    def get_absolute_url(self):
+        return('pastebin_paste_detail', [self.id])
 
