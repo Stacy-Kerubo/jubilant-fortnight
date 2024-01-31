@@ -5,13 +5,20 @@ from django.utils import timezone
 
 #define a Post model that will allow us to store blog posts in the database
 class Post(models.Model):
+    
+    class Status(models.TextChoices):
+        DRAFT='DF','Draft'
+        PUBLISHED='PB','Published'
+        
     title=models.CharField(max_length=250)
     slug=models.SlugField(max_length=250)
     body=models.TextField()
     publish= models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    
+    status=models.Charfield(max_length=2,
+                           choices=Status.choices,
+                           default=Status.DRAFT)
     class Meta:
         ordering=['-publish']
         indexes=[
