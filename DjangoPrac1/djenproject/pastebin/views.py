@@ -22,7 +22,9 @@ class PasteList(ListView):
     context_object_name='queryset'
 class PasteUpdate(UpdateView):
     model = Paste
-    template_name = ['text','name']
+    template_name ='pastebin/paste_detail.html'
+    fields= ['text','name']
 class PasteDelete(DeleteView):
     model = Paste
+    template_name='pastebin/paste_confirm_delete.html' 
     success_url = reverse_lazy('pastebin_paste_list')

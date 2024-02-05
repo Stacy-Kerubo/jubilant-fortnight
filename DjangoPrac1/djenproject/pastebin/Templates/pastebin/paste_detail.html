@@ -21,8 +21,7 @@
 </div>
 <div>
 <label>Text</label>
-<textarea rows="10" cols="50" OnClick="this.select();" readonly="true">{{
-˓→object.text }}</textarea>
+<textarea rows="10" cols="50" OnClick="this.select();" readonly="true">{{object.text}}</textarea>
 </div>
 <div>
 <label>Created</label>
@@ -39,8 +38,7 @@
 <a href="{% url 'pastebin_paste_edit' object.id %}">Edit this paste</a>
 </li>
 <li>
-<a href="{% url 'pastebin_paste_delete' object.id %}">Delete this paste</
-˓→a>
+<a href="{% url 'pastebin_paste_delete' object.id %}">Delete this paste</a>
 </li>
 </ul>
 <a href="{% url 'pastebin_paste_list' %}">View All</a>

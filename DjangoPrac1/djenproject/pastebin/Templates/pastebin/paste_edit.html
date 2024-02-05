@@ -1,0 +1,6 @@
+<h1>Edit Paste</h1>
+<form method="post" action="{% url 'pastebin_paste_edit' object.id %}">
+  {% csrf_token %} {{ form.as_table }}
+  <input type="submit" value="Save changes" />
+</form>
+<a href="{% url 'pastebin_paste_detail' object.id %}">Cancel</a>
