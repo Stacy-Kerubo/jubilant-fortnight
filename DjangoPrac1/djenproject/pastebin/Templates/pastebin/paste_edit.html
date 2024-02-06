@@ -3,4 +3,4 @@
   {% csrf_token %} {{ form.as_table }}
   <input type="submit" value="Save changes" />
 </form>
-<a href="{% url 'pastebin_paste_detail' object.id %}">Cancel</a>
+<a href="{% url 'pastebin_paste_detail' paste.pk %}">{{paste}}Cancel</a>
